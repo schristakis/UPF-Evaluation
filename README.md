@@ -59,13 +59,20 @@ sudo bash deploy-ueransim-spgwu.sh
 
 When both commands are executed, your SPGWU-based deployment should be working properly. 
 
-You may ckeck the status of your containers with:
+- You may ckeck the status of your containers with:
 ```
 sudo docker ps -a
 ```
-You may ckeck the logs of each network function by executing the following command (generates log files (.txt)):
+- You may ckeck the logs of each network function by executing the following command (generates .txt log files):
 ```
 bash generate-logs.sh
+```
+- You can destroy the whole architecture by executing the following commands:
+```
+bash destroy-spgwu-based-core.sh
+```
+```
+bash destroy-spgwu-ueransim.sh
 ```
 
 
