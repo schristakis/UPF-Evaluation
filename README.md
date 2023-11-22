@@ -210,6 +210,12 @@ bash destroy-p4-ueransim.sh
 
 ### 2.4 SmartNIC-P4-UPF: 
 
+ip route add 12.1.1.0/24 via 192.168.1.2
+
+ip route add 192.168.70.128/26 via 192.168.1.3
+
+masquerade klp
+postrouting
 
 #### Configuration
 
