@@ -65,7 +65,7 @@ sudo docker ps -a
 ```
 - You may ckeck the logs of each network function by executing the following command (generates .txt log files):
 ```
-bash generate-logs.sh
+bash generate-logs-spgwu.sh
 ```
 - You can destroy the whole architecture by executing the following commands:
 ```
@@ -78,7 +78,7 @@ bash destroy-spgwu-ueransim.sh
 ### 2.2 VPP-UPF: 
 
 The OpenAirInterface's 'oai-spgwu-tiny' is an enhanced version of the Serving and Packet Data Network Gateway User plane (SPGW-U), a key component in 4G/LTE networks for routing and forwarding user data. Initially designed for 4G/LTE based on 3GPP standards, it has been updated to also support 5G networks.
-The complete 5G architecture (based on SPGWU-UPF) can be depicted in the figure below:
+The complete 5G architecture (based on VPP-UPF) can be depicted in the figure below:
 
 ![Alt text](/figures/vpp_arch.png)
 
@@ -93,7 +93,7 @@ sudo bash deploy-vpp-based-core.sh
 sudo bash deploy-ueransim-vpp.sh
 ```
 
-When both commands are executed, your SPGWU-based deployment should be working properly. 
+When both commands are executed, your VPP-based deployment should be working properly. 
 
 - You may ckeck the status of your containers with:
 ```
@@ -101,7 +101,7 @@ sudo docker ps -a
 ```
 - You may ckeck the logs of each network function by executing the following command (generates .txt log files):
 ```
-bash generate-logs.sh
+bash generate-logs-vpp.sh
 ```
 - You can destroy the whole architecture by executing the following commands:
 ```
