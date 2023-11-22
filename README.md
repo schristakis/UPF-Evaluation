@@ -3,3 +3,9 @@ This Repository is about Evaluation of Different UPF Implementations, regarding 
 
 
 ## Prerequisites
+
+Docker Installation: 
+
+```
+sudo apt-get update
+```
