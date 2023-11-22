@@ -123,7 +123,59 @@ P4, a programming language, revolutionizes packet switches for 5G networks by tu
 </p>
 
 
-In order to Deploy this setup you have to execute the following commands on your host machine:
+#### Configuration
+
+For the P4-Switch deployment we utilized the Wedge100BF-32X Switch. The procedure to make it work properly is described below:
+
+i)	Connect the switch to the power and wait for the Baseboard Management Controller (BMC) to finish booting.
+
+ii)	Connect the switch with a physical server via a rollover cable on the console ethernet port of the switch.
+
+iii)	Connect the switch with a physical server via ethernet cable on the management ethernet port of the switch
+
+iv)	Connect to the switch via the serial console (using screen):
+```
+screen /dev/ttyS1 9600
+```
+Replace "/dev/ttyS1" with the appropriate serial port if needed.
+
+v)	Log into the BMC with the login: 
+
+username: root 
+
+password: 0penBmc
+
+vi)	Connect to the ONIE environment by running sol.sh
+```
+sol.sh
+```
+
+vii)	Stop the dhcp discovery by running:
+```
+onie-discovery-stop
+```
+
+viii)	Add a static IP to eth0, matching the subnet of the server you are connected through the management port.
+
+ix)	Build ONL installer by using a pre-built ONL installer
+
+x)	Obtain the ONL installer to the switch from a TFTP or HTTP Server or transfer the installer via SCP command.
+
+xi)	Install the ONL installer by: onie-nos-install onl-installer-file using the console connection
+
+xii)	After the switch is booted with the ONL, login with: 
+
+username: root 
+
+password: onl
+
+xiii)	Bring the ma1  interface up (using a different IP from bmc’s eth0)  and connect with ssh using the management connection
+
+xiv)	Add a gateway and DNS server and make the IP configurations persistent via /etc/network/interfaces 
+
+
+
+Finally, in order to Deploy this setup, you have to execute the following commands on your host machine:
 
 * Deploy the 5G Core Network based on P4-Switch:
 ```
