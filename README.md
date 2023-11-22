@@ -225,16 +225,16 @@ postrouting
 
 Finally, in order to Deploy this setup, you have to execute the following commands on your host machine:
 
-* Deploy the 5G Core Network based on P4-Switch:
+* Deploy the 5G Core Network based on SmartNIC-p4 Card:
 ```
-sudo bash deploy-p4-based-core.sh
+sudo bash deploy-smartnic-p4-based-core.sh
 ```
 * Deploy 5G RAN based on UERANSIM:
 ```
-sudo bash deploy-ueransim-p4.sh
+sudo bash deploy-ueransim-smartnic-p4.sh
 ```
 
-When both commands are executed, your P4-Switch-based deployment should be working properly. 
+When both commands are executed, your SmartNIC-p4 based deployment should be working properly. 
 
 - You may ckeck the status of your containers with:
 ```
@@ -242,14 +242,14 @@ sudo docker ps -a
 ```
 - You may ckeck the logs of each network function by executing the following command (generates .txt log files):
 ```
-bash generate-logs-p4.sh
+bash generate-logs-smartnic-p4.sh
 ```
 - You can destroy the whole architecture by executing the following commands:
 ```
-bash destroy-p4-based-core.sh
+bash bash destroy-smartnic-p4-based-core.sh
 ```
 ```
-bash destroy-p4-ueransim.sh
+bash destroy-ueransim-smartnic-p4.sh
 ```
 
 
