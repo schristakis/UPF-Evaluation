@@ -110,3 +110,45 @@ bash destroy-vpp-based-core.sh
 bash destroy-vpp-ueransim.sh
 ```
 
+
+
+### 2.3 P4-SWITCH-UPF: 
+
+P4, a programming language, revolutionizes packet switches for 5G networks by turning static hardware into programmable devices, melding hardware speed with software flexibility. Our setup includes ONOS (managing P4-switch User Plane Function), Stratum (guiding physical switches), and the PFCP Agent for control plane links. ONOS controls network programming and policy updates, while Stratum implements ONOS's commands in hardware. The PFCP Agent facilitates communication between the control plane and P4-switches. Displayed in the Figures, our architecture integrates ONOS and OpenAirInterface on a server, with UPF and Stratum running in the P4 switch. This system is unified via a management switch and a user-plane network linked by a QFSP cable to the P4 switch.
+
+
+<p align="center">
+  <img src="/figures/p4_distribution.png" width="400" /> 
+  <img src="/figures/p4_arch.png" width="400" />
+</p>
+
+
+In order to Deploy this setup you have to execute the following commands on your host machine:
+
+* Deploy the 5G Core Network based on P4-Switch:
+```
+sudo bash deploy-p4-based-core.sh
+```
+* Deploy 5G RAN based on UERANSIM:
+```
+sudo bash deploy-ueransim-p4.sh
+```
+
+When both commands are executed, your P4-Switch-based deployment should be working properly. 
+
+- You may ckeck the status of your containers with:
+```
+sudo docker ps -a
+```
+- You may ckeck the logs of each network function by executing the following command (generates .txt log files):
+```
+bash generate-logs-p4.sh
+```
+- You can destroy the whole architecture by executing the following commands:
+```
+bash destroy-p4-based-core.sh
+```
+```
+bash destroy-p4-ueransim.sh
+```
+
