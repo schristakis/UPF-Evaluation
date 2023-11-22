@@ -1,7 +1,7 @@
 # UPF-Evaluation
 This Repository is about Evaluation of Different UPF Implementations, regarding SPGWU-UPF, P4-UPF and VPP-UPF
 
-
+specs klp
 
 ## 1. Prerequisites
 
@@ -77,8 +77,7 @@ bash destroy-spgwu-ueransim.sh
 
 ### 2.2 VPP-UPF: 
 
-The OpenAirInterface's 'oai-spgwu-tiny' is an enhanced version of the Serving and Packet Data Network Gateway User plane (SPGW-U), a key component in 4G/LTE networks for routing and forwarding user data. Initially designed for 4G/LTE based on 3GPP standards, it has been updated to also support 5G networks.
-The complete 5G architecture (based on VPP-UPF) can be depicted in the figure below:
+Vector Packet Processing (VPP) is a high-speed, high-efficiency packet processing framework that enhances data plane performance in networks. Unlike traditional methods, VPP uses vector processing to handle multiple packets simultaneously, leveraging modern CPUs' SIMD capabilities for parallel processing. This results in high throughput and low latency, often outperforming specialized hardware. VPP incorporates the Data Plane Development Kit (DPDK) for direct NIC access, bypassing the OS network stack, and distributes workloads across multiple CPU cores for scalability. VPP is particularly beneficial in 5G networks, where it's used for User Plane Function solutions, handling high-speed data with low response times.
 
 ![Alt text](/figures/vpp_arch.png)
 
