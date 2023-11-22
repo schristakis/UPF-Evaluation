@@ -5,7 +5,7 @@ specs klp
 
 ## 1. Prerequisites
 
-### * Docker Installation: 
+### 1.1 Docker Installation: 
 
 Update:
 ```
@@ -24,7 +24,7 @@ sudo systemctl enable docker
 sudo systemctl start docker
 ```
 
-### * Docker Compose Installation:
+### 1.2 Docker Compose Installation:
 
 Download Docker Compose from its official GitHub repository
 ```
