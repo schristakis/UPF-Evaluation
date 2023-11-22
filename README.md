@@ -4,7 +4,7 @@ This Repository is about Evaluation of Different UPF Implementations, regarding 
 
 1. Prerequisites
 
-1.1. Docker Installation: 
+* Docker Installation: 
 
 Update:
 ```
@@ -23,7 +23,7 @@ sudo systemctl enable docker
 sudo systemctl start docker
 ```
 
-1.2. Docker Compose Installation:
+* Docker Compose Installation:
 
 Download Docker Compose from its official GitHub repository
 ```
