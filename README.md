@@ -210,6 +210,9 @@ bash destroy-p4-ueransim.sh
 
 ### 2.4 SmartNIC-P4-UPF: 
 
+Our SmartNIC-based SPGWU setup, using NITOS testbed's two powerful machines, has one machine for RAN functions and another with a SmartNIC P4 card for core 5G network functions. We employ virtual interfaces with SRIOV for low-latency network function access, directly handling packets in user-space. The card's programmable flows are configured to route packets from the physical to the virtual port where the UPF is established. This setup mirrors traditional SPGWU's functionality, with the primary difference being that GTP traffic is specifically directed through the SmartNIC.
+
+
 ip route add 12.1.1.0/24 via 192.168.1.2
 
 ip route add 192.168.70.128/26 via 192.168.1.3
