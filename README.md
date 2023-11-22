@@ -37,8 +37,36 @@ sudo systemctl start docker
 
 
 ## 2. Deployments
+GENIKA LOGIS
 
 ### 2.1 SPGWU-UPF: 
 
 The OpenAirInterface's 'oai-spgwu-tiny' is an enhanced version of the Serving and Packet Data Network Gateway User plane (SPGW-U), a key component in 4G/LTE networks for routing and forwarding user data. Initially designed for 4G/LTE based on 3GPP standards, it has been updated to also support 5G networks.
+The complete 5G architecture (based on SPGWU-UPF) can be depicted in the figure below:
+
+![Alt text](/figures/spgwu_arch.png)
+
+In order to Deploy this setup you have to execute the following commands on your host machine:
+
+* Deploy the 5G Core Network based on SPGWU:
+```
+sudo bash deploy-spgwu-based-core.sh
+```
+* Deploy 5G RAN based on UERANSIM:
+```
+sudo bash deploy-ueransim-spgwu.sh
+```
+
+When both commands are executed, your SPGWU-based deployment should be working properly. 
+
+You may ckeck the status of your containers with:
+```
+sudo docker ps -a
+```
+You may ckeck the logs of each network function by executing the following command (generates log files (.txt)):
+```
+bash generate-logs.sh
+```
+
+
 
