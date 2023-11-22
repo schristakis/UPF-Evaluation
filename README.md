@@ -40,4 +40,5 @@ sudo systemctl start docker
 
 ### 2.1 SPGWU-UPF: 
 
+The OpenAirInterface's 'oai-spgwu-tiny' is an enhanced version of the Serving and Packet Data Network Gateway User plane (SPGW-U), a key component in 4G/LTE networks for routing and forwarding user data. Initially designed for 4G/LTE based on 3GPP standards, it has been updated to also support 5G networks.
 
