@@ -36,4 +36,8 @@ sudo systemctl start docker
 ```
 
 
-## 2. Prerequisites
+## 2. Deployments
+
+### 2.1 SPGWU-UPF: 
+
+
