@@ -37,7 +37,7 @@ sudo chmod +x /usr/local/bin/docker-compose
 
 
 ## 2. Deployments
-GENIKA LOGIS
+Each UPF deployment has one folder for the core network configuration (spgwu, vpp, p4) and one folder for the respective UERANSIM deployment(UERASNIM-spgwu, UERASNIM-vpp, UERASNIM-p4). You can manually deploy everything by using the docker-compose -f command. However in this tutorial we have generated scipts that deploy and destroy each deployment (More info below..). 
 
 ### 2.1 SPGWU-UPF: 
 
