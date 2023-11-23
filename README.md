@@ -1,6 +1,6 @@
 # UPF-Evaluation
 
-## This repository gives information on how to set up four different 5G UPF Implementations: SPGWU-UPF, P4-UPF, VPP-UPF, and SmartNIC-P4-UPF, utilizing the OpenAirInterface 5G framework.
+## This repository gives information on how to set up four different 5G UPF Implementations: SPGWU-UPF, P4-Switch-UPF, VPP-UPF, and SmartNIC-P4-UPF, utilizing the OpenAirInterface 5G framework.
 
 ## 1. Prerequisites
 
