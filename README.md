@@ -172,7 +172,10 @@ xiii)	Bring the ma1  interface up (using a different IP from bmc’s eth0)  and 
 
 xiv)	Add a gateway and DNS server and make the IP configurations persistent via /etc/network/interfaces 
 
+After configuring the p4-switch refer to the following gitlab repository to find out how to deploy STRATUM and ONOS based on your setup:
 
+
+https://gitlab.eurecom.fr/oai/cn5g/oai-cn5g-upf-sdfabric/-/wikis/Deployment-using-Docker
 
 Finally, in order to Deploy this setup, you have to execute the following commands on your host machine:
 
@@ -215,7 +218,12 @@ Our SmartNIC-based SPGWU setup, using NITOS testbed's two powerful machines, has
 
 #### Configuration
 
-CONFIGURATION SMARTNIC
+The SmartNIC card configuration can be a little tricky. You should follow the information and procedures provided by the official site based on your card model:
+
+
+https://www.netronome.com/products/agilio-cx/
+
+After configuring, make sure that the two machines can communicate with each other with the use of a traffic generator tool (e.g. iperf)
 
 Finally, in order to Deploy this setup, you have to execute the following commands on your host machine:
 
