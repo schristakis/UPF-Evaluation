@@ -62,7 +62,7 @@ When both commands are executed, your SPGWU-based deployment should be working p
 ```
 sudo docker ps -a
 ```
-- You may ckeck the logs of each network function by executing the following command (generates .txt log files):
+- You may ckeck the logs of each core network function by executing the following command (generates .txt log files):
 ```
 bash generate-logs-spgwu.sh
 ```
@@ -97,7 +97,7 @@ When both commands are executed, your VPP-based deployment should be working pro
 ```
 sudo docker ps -a
 ```
-- You may ckeck the logs of each network function by executing the following command (generates .txt log files):
+- You may ckeck the logs of each core network function by executing the following command (generates .txt log files):
 ```
 bash generate-logs-vpp.sh
 ```
@@ -191,7 +191,7 @@ When both commands are executed, your P4-Switch-based deployment should be worki
 ```
 sudo docker ps -a
 ```
-- You may ckeck the logs of each network function by executing the following command (generates .txt log files):
+- You may ckeck the logs of each core network function by executing the following command (generates .txt log files):
 ```
 bash generate-logs-p4.sh
 ```
@@ -254,14 +254,16 @@ When both commands are executed, your SmartNIC-p4 based deployment should be wor
 ```
 sudo docker ps -a
 ```
-- You may ckeck the logs of each network function by executing the following command (generates .txt log files):
+- You may ckeck the logs of each core network function by executing the following command (generates .txt log files) (Machine 1):
 ```
 bash generate-logs-smartnic-p4.sh
 ```
 - You can destroy the whole architecture by executing the following commands:
+Machine 1
 ```
 bash bash destroy-smartnic-p4-based-core.sh
 ```
+Machine 2
 ```
 bash destroy-ueransim-smartnic-p4.sh
 ```
