@@ -216,20 +216,27 @@ Our SmartNIC-based SPGWU setup, using NITOS testbed's two powerful machines, has
 
 #### Configuration
 
-ip route add 12.1.1.0/24 via 192.168.1.2
-
-ip route add 192.168.70.128/26 via 192.168.1.3
-
 masquerade klp
 postrouting
 
 Finally, in order to Deploy this setup, you have to execute the following commands on your host machine:
 
-* Deploy the 5G Core Network based on SmartNIC-p4 Card:
+* Execute the following commands to make sure that the Network Functions can reach each other on separate machines:
+
+Machine 1:
+```
+ip route add 12.1.1.0/24 via 192.168.1.2
+```
+Machine 2:
+```
+ip route add 192.168.70.128/26 via 192.168.1.3
+```
+
+* Deploy the 5G Core Network based on SmartNIC-p4 Card (Machine 1):
 ```
 sudo bash deploy-smartnic-p4-based-core.sh
 ```
-* Deploy 5G RAN based on UERANSIM:
+* Deploy 5G RAN based on UERANSIM (Machine 2):
 ```
 sudo bash deploy-ueransim-smartnic-p4.sh
 ```
