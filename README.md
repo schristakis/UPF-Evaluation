@@ -216,8 +216,7 @@ Our SmartNIC-based SPGWU setup, using NITOS testbed's two powerful machines, has
 
 #### Configuration
 
-masquerade klp
-postrouting
+CONFIGURATION SMARTNIC
 
 Finally, in order to Deploy this setup, you have to execute the following commands on your host machine:
 
