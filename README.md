@@ -227,6 +227,15 @@ Machine 1:
 ```
 ip route add 12.1.1.0/24 via 192.168.1.2
 ```
+```
+sudo iptables -t nat -A POSTROUTING -o vf0_0 -j MASQUERADE
+```
+```
+sudo iptables -A FORWARD -i vf0_0 -o demo-oai -j ACCEPT
+```
+```
+sudo iptables -A FORWARD -i demo-oai -o vf0_0 -j ACCEPT
+```
 Machine 2:
 ```
 ip route add 192.168.70.128/26 via 192.168.1.3
