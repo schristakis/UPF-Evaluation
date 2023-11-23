@@ -49,11 +49,11 @@ In order to Deploy this setup you have to execute the following commands on your
 
 * Deploy the 5G Core Network based on SPGWU:
 ```
-sudo bash deploy-spgwu-based-core.sh
+sudo bash scripts/deploy-spgwu-based-core.sh
 ```
 * Deploy 5G RAN based on UERANSIM:
 ```
-sudo bash deploy-ueransim-spgwu.sh
+sudo bash scripts/deploy-ueransim-spgwu.sh
 ```
 
 When both commands are executed, your SPGWU-based deployment should be working properly. 
@@ -64,14 +64,14 @@ sudo docker ps -a
 ```
 - You may ckeck the logs of each core network function by executing the following command (generates .txt log files):
 ```
-bash generate-logs-spgwu.sh
+sudo bash scripts/generate-logs-spgwu.sh
 ```
 - You can destroy the whole architecture by executing the following commands:
 ```
-bash destroy-spgwu-based-core.sh
+sudo bash scripts/destroy-spgwu-based-core.sh
 ```
 ```
-bash destroy-spgwu-ueransim.sh
+sudo bash scripts/destroy-spgwu-ueransim.sh
 ```
 
 ### 2.2 VPP-UPF: 
@@ -84,11 +84,11 @@ In order to Deploy this setup you have to execute the following commands on your
 
 * Deploy the 5G Core Network based on VPP:
 ```
-sudo bash deploy-vpp-based-core.sh
+sudo bash scripts/deploy-vpp-based-core.sh
 ```
 * Deploy 5G RAN based on UERANSIM:
 ```
-sudo bash deploy-ueransim-vpp.sh
+sudo bash scripts/deploy-ueransim-vpp.sh
 ```
 
 When both commands are executed, your VPP-based deployment should be working properly. 
@@ -99,14 +99,14 @@ sudo docker ps -a
 ```
 - You may ckeck the logs of each core network function by executing the following command (generates .txt log files):
 ```
-bash generate-logs-vpp.sh
+bash scripts/generate-logs-vpp.sh
 ```
 - You can destroy the whole architecture by executing the following commands:
 ```
-bash destroy-vpp-based-core.sh
+sudo bash scripts/destroy-vpp-based-core.sh
 ```
 ```
-bash destroy-vpp-ueransim.sh
+sudo bash scripts/destroy-vpp-ueransim.sh
 ```
 
 
@@ -181,11 +181,11 @@ Finally, in order to Deploy this setup, you have to execute the following comman
 
 * Deploy the 5G Core Network based on P4-Switch:
 ```
-sudo bash deploy-p4-based-core.sh
+sudo bash scripts/deploy-p4-based-core.sh
 ```
 * Deploy 5G RAN based on UERANSIM:
 ```
-sudo bash deploy-ueransim-p4.sh
+sudo bash scripts/deploy-ueransim-p4.sh
 ```
 
 When both commands are executed, your P4-Switch-based deployment should be working properly. 
@@ -196,14 +196,14 @@ sudo docker ps -a
 ```
 - You may ckeck the logs of each core network function by executing the following command (generates .txt log files):
 ```
-bash generate-logs-p4.sh
+sudo bash scripts/generate-logs-p4.sh
 ```
 - You can destroy the whole architecture by executing the following commands:
 ```
-bash destroy-p4-based-core.sh
+sudo bash scripts/destroy-p4-based-core.sh
 ```
 ```
-bash destroy-p4-ueransim.sh
+sudo bash scripts/destroy-p4-ueransim.sh
 ```
 
 
@@ -231,7 +231,7 @@ Finally, in order to Deploy this setup, you have to execute the following comman
 
 Machine 1:
 ```
-ip route add 12.1.1.0/24 via 192.168.1.2
+sudo ip route add 12.1.1.0/24 via 192.168.1.2
 ```
 ```
 sudo iptables -t nat -A POSTROUTING -o vf0_0 -j MASQUERADE
@@ -244,16 +244,16 @@ sudo iptables -A FORWARD -i demo-oai -o vf0_0 -j ACCEPT
 ```
 Machine 2:
 ```
-ip route add 192.168.70.128/26 via 192.168.1.3
+sudo ip route add 192.168.70.128/26 via 192.168.1.3
 ```
 
 * Deploy the 5G Core Network based on SmartNIC-p4 Card (Machine 1):
 ```
-sudo bash deploy-smartnic-p4-based-core.sh
+sudo bash scripts/deploy-smartnic-p4-based-core.sh
 ```
 * Deploy 5G RAN based on UERANSIM (Machine 2):
 ```
-sudo bash deploy-ueransim-smartnic-p4.sh
+sudo bash scripts/deploy-ueransim-smartnic-p4.sh
 ```
 
 When both commands are executed, your SmartNIC-p4 based deployment should be working properly. 
@@ -264,18 +264,18 @@ sudo docker ps -a
 ```
 - You may ckeck the logs of each core network function by executing the following command (generates .txt log files) (Machine 1):
 ```
-bash generate-logs-smartnic-p4.sh
+sudo bash scripts/generate-logs-smartnic-p4.sh
 ```
 - You can destroy the whole architecture by executing the following commands:
 
 
 Machine 1
 ```
-bash bash destroy-smartnic-p4-based-core.sh
+sudo bash scripts/destroy-smartnic-p4-based-core.sh
 ```
 Machine 2
 ```
-bash destroy-ueransim-smartnic-p4.sh
+sudo bash scripts/destroy-ueransim-smartnic-p4.sh
 ```
 
 
