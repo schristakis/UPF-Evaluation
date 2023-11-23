@@ -1,7 +1,6 @@
 # UPF-Evaluation
-This Repository is about Evaluation of Different UPF Implementations, regarding SPGWU-UPF, P4-UPF and VPP-UPF
 
-specs klp
+This repository gives information on how to set up four different 5G UPF Implementations: SPGWU-UPF, P4-UPF, VPP-UPF, and SmartNIC-P4-UPF, utilizing the OpenAirInterface 5G framework.
 
 ## 1. Prerequisites
 
