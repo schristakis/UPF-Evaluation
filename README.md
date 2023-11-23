@@ -260,6 +260,7 @@ bash generate-logs-smartnic-p4.sh
 ```
 - You can destroy the whole architecture by executing the following commands:
 
+
 Machine 1
 ```
 bash bash destroy-smartnic-p4-based-core.sh
